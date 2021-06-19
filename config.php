@@ -29,4 +29,12 @@ return [
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
     },
+
+    'posts' => [
+        'path' => 'blog/{filename}/{date|Y-m-d}',
+    ],
+
+    'documentation' => [
+
+    ]
 ];

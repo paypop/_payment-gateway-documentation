@@ -4,11 +4,11 @@
 <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="flex flex-col-reverse mb-10 lg:flex-row lg:mb-24">
         <div class="mt-8">
-            <h1 id="intro-docs-template">{{ $page->siteName }}</h1>
+            <h1 id="intro-docs-template">MetaPay</h1>
 
-            <h2 id="intro-powered-by-jigsaw" class="font-light mt-4">{{ $page->siteDescription }}</h2>
+            <h2 id="intro-powered-by-jigsaw" class="font-light mt-4">Payment Gateway for Monero</h2>
 
-            <p class="text-lg">Give your documentation a boost with Jigsaw. <br class="hidden sm:block">Generate elegant, static docs quickly and easily.</p>
+            <p class="text-lg">Accept Monero on your business online.</p>
 
             <div class="flex my-10">
                 <a href="/docs/getting-started" title="{{ $page->siteName }} getting started" class="bg-orange-600 hover:bg-orange-500 font-normal text-white hover:text-white rounded mr-4 py-2 px-6">Get Started</a>
@@ -17,46 +17,52 @@
             </div>
         </div>
 
-        <img src="/assets/img/logo-large.svg" alt="{{ $page->siteName }} large logo" class="mx-auto mb-6 lg:mb-0 ">
+        <img src="/assets/img/logo2.svg" alt="{{ $page->siteName }} large logo" class="mx-auto mb-6 lg:mb-0 ">
     </div>
 
     <hr class="block my-8 border lg:hidden">
 
-    <div class="md:flex -mx-2 -mx-4">
+    <div class="md:flex -mx-2 -mx-4 custom-icons">
 
         @php
             $contents = [
                 [
-                    'icon' => '',
-                    'title' => 'Free and open source',
+                    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diagram-3" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"/></svg>',
+                    'title' => 'No external service',
+                    'p' => 'Keep the control on your wallet, your server, your database.'
+                ],
+                [
+                    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16"><path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/></svg>',
+                    'title' => 'Compatible everywhere',
                     'p' => 'Blade is a powerful, simple, and beautiful templating language, and now you can use it for your static sites, not just your Laravel-powered apps.'
-                ]
+                ],
+                [
+                    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+                    'title' => 'Free & open source',
+                    'p' => 'Blade is a powerful, simple, and beautiful templating language, and now you can use it for your static sites, not just your Laravel-powered apps.'
+                ],
+
             ];
         @endphp
 
-        <div class="mb-8 mx-3 px-2 md:w-1/3">
-            <img src="/assets/img/icon-window.svg" class="h-12 w-12" alt="window icon">
+        <style>
+            .custom-icons svg {
+                transform: scale(2);
+            }
+        </style>
 
-            <h3 id="intro-laravel" class="text-2xl text-gray-700 mb-0">Free and open source</h3>
+        @foreach($contents as $content)
+            <div class="mb-8 mx-3 px-2 md:w-1/3">
+                <div class="">
+                    {!! $content['icon'] !!}
+                </div>
 
-            <p>Blade is a powerful, simple, and beautiful templating language, and now you can use it for your static sites, not just your Laravel-powered apps.</p>
-        </div>
+                <h3 class="text-2xl text-gray-900 mb-0">{{ $content['title'] }}</h3>
 
-        <div class="mb-8 mx-3 px-2 md:w-1/3">
-            <img src="/assets/img/icon-terminal.svg" class="h-12 w-12" alt="terminal icon">
+                <p>{{ $content['p'] }}</p>
+            </div>
+        @endforeach
 
-            <h3 id="intro-markdown" class="text-2xl text-gray-700 mb-0">No third party</h3>
-
-            <p>Markdown is the web’s leading format for writing articles, blog posts, documentation, and more. Jigsaw makes it painless to work with Markdown content.</p>
-        </div>
-
-        <div class="mx-3 px-2 md:w-1/3">
-            <img src="/assets/img/icon-stack.svg" class="h-12 w-12" alt="stack icon">
-
-            <h3 id="intro-mix" class="text-2xl text-gray-700 mb-0">Private. For real.</h3>
-
-            <p>Jigsaw comes pre-configured with Laravel Mix, a simple and powerful build tool. Use the latest frontend tech with just a few lines of code.</p>
-        </div>
     </div>
 </section>
 
@@ -114,9 +120,10 @@
                     </div>
                 </div>
             @endforeach
-
         </div>
+        {{--
         <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        --}}
     </div>
 </section>
 
