@@ -1,3 +1,8 @@
+import {apiDropdown} from './api-dropdown'
+apiDropdown()
+
+
+/*
 window.docsearch = require('docsearch.js');
 
 import hljs from 'highlight.js/lib/highlight';
@@ -15,3 +20,5 @@ hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'));
 document.querySelectorAll('pre code').forEach((block) => {
     hljs.highlightBlock(block);
 });
+
+ */

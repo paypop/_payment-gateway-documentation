@@ -35,6 +35,6 @@ return [
     ],
 
     'documentation' => [
-
+        'path' => 'documentation/{filename}'
     ]
 ];
